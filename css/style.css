@@ -64,6 +64,38 @@ nav a:focus-visible {
     transform: translateY(-1px);
 }
 
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-icon {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    margin-right: 8px;
+    background: currentColor;
+    vertical-align: middle;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    content: "";
+}
+
+.hamburger-icon::before {
+    top: -7px;
+}
+
+.hamburger-icon::after {
+    top: 7px;
+}
+
 h1 {
     margin: 0 0 24px;
     color: #0f172a;
@@ -193,6 +225,43 @@ section {
 }
 
 @media (max-width: 560px) {
+    nav.menu-ready {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav.menu-ready .menu-toggle {
+        display: block;
+        padding: 8px 12px;
+        border: 1px solid #ffffff;
+        border-radius: 8px;
+        background: transparent;
+        color: #ffffff;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    nav.menu-ready:not(.menu-open) ul {
+        display: none;
+    }
+
+    nav.menu-ready.menu-open ul {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding-top: 12px;
+    }
+
+    nav.menu-ready.menu-open li,
+    nav.menu-ready.menu-open a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
     .service-grid {
         grid-template-columns: 1fr;
         gap: 18px;

@@ -10,7 +10,11 @@
 <body>
     <header>
         <nav aria-label="Main navigation">
-            <ul>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="hamburger-icon" aria-hidden="true"></span>
+                Menu
+            </button>
+            <ul id="primary-navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html" aria-current="page">About</a></li>
