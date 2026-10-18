@@ -169,6 +169,18 @@ section {
     font-size: 1.02rem;
 }
 
+.services-section h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.services-section h2 a:hover,
+.services-section h2 a:focus-visible {
+    color: #1d4e89;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
 .services-page {
     width: 100%;
 }
